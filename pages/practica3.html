@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de refacciones</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de refacciones para motocicletas</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Agregar/Editar refacción</h2>
+            <form id="refaccion-form">
+                <input type="hidden" id="refaccion-id" name="refaccion-id">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" required>
+                <label for="categoria">Categoría:</label>
+                <select name="categoria" id="categoria">
+                    <option value="">Seleccione una categoría</option>
+                    <option value="llantas">Llantas</option>
+                    <option value="motor">Motor</option>
+                    <option value="pintura">Pintura</option>
+                    <option value="accesorios">Accesorios</option>
+                </select>
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" required>
+                <label for="stock">Stock:</label>
+                <input type="number" id="stock" name="stock" required>
+                <button type="submit">Guardar refacción</button>
+            </form>
+        </section>
+        <section class="list-section">
+            <h2>Refacciones registradas</h2>
+            <table id="refacciones-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Marca</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="refacciones-body"></tbody>
+            </table>
+            <button id="reset-btn">Limpiar lista</button>
+        </section>
+    </main>
+    <script src="../js/practica3.js"></script>
+</body>
+</html>
